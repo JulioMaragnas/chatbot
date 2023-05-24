@@ -4,17 +4,20 @@ const script = (profileName) => [
     coincidences: 'Hola, ola, hey, ., hello, buen, buenas',
     category: 'approval',
     order: 0,
-    answer: ()=> `Bienvenido a la atención virtual de GOLDTALENT SOLUCIONES
+    answer: ['si', 'no'],
+    answerResponse: ()=> `Bienvenido a la atención virtual de GOLDTALENT SOLUCIONES
 
     *En cumplimiento de las disposiciones de la Ley 1581 de 2012 y del Decreto reglamentario 1377, Goldtalent solicita la autorización para almacenar y tratar tus datos personales para ponernos en contacto contigo acerca de nuestros procesos, productos y servicios.*
+    
     Nos autorizas? Si/No`
   },
   {
-    type: 'Authorization',
+    type: 'authorization',
     coincidences: '',
     category: 'approval',
     order: 11,
-    answer: ()=> `Para poder continuar con el proceso debes autorizarnos para tratar tus datos personales
+    answer: ['si', 'no'],
+    answerResponse: ()=> `Para poder continuar con el proceso debes autorizarnos para tratar tus datos personales
     Nos autorizas? Si/No`
   },
   {
@@ -22,30 +25,32 @@ const script = (profileName) => [
     coincidences: '',
     category: 'menu',
     order: 1,
-    answer: ()=> `Gracias por aceptar, para personalizar tu atención cuéntanos ¿cómo te llamas?`
+    answerResponse: ()=> `Gracias por aceptar, para personalizar tu atención cuéntanos ¿cómo te llamas?`
   },
   {
     type: 'services',
     coincidences: '',
     category: 'menu',
     order: 2,
-    answer: ()=> `Hola! Soy Goldie, para saber cómo podemos ayudarte el día de hoy cuéntanos si eres:
+    answer: [1,2],
+    answerResponse: ()=> `Hola! Soy Goldie, para saber cómo podemos ayudarte el día de hoy cuéntanos si eres:
     1. Un candidato interesado en procesos de selección.
     2. Una empresa interesada en nuestros servicios.`
   },
   {
     type: 'regards',
-    coincidences: '',
+    coincidences: '', 
     category: 'menu',
     order: 13,
-    answer: ()=> `Gracias <Persona>, toda la información fue recogida en nuestra base de datos y será revisada para nuestros procesos.`
+    answerResponse: (person)=> `Gracias ${person}, toda la información fue recogida en nuestra base de datos y será revisada para nuestros procesos.`
   },
   {
     type: 'servicesnominee',
     coincidences: '',
     category: 'recruiting',
     order: 1,
-    answer: (person)=> `Hola ${person}, es un gusto saludarte, soy Goldi tu asistente virtual 😁, te haré preguntas para entender que necesitas y redireccionarte de manera adecuada a nuestro equipo o encargados de los procesos.📌
+    answer:[1,2,3],
+    answerResponse: (person)=> `Hola ${person}, es un gusto saludarte, soy Goldi tu asistente virtual 😁, te haré preguntas para entender que necesitas y redireccionarte de manera adecuada a nuestro equipo o encargados de los procesos.📌
     Te interesa:
     1. Conocer el estado de un proceso de selección en el que estás participando
     2. Tener información más detallada de una vacante
@@ -56,28 +61,28 @@ const script = (profileName) => [
     coincidences: '',
     category: 'recruiting',
     order: 11,
-    answer: ()=> `Perfecto, ¿Cuál es tu número de cédula?`
+    answerResponse: ()=> `Perfecto, ¿Cuál es tu número de cédula?`
   },
   {
     type: 'servicesnominee',
     coincidences: '',
     category: 'recruiting',
     order: 12,
-    answer: ()=> `¿Cuál es tu correo electrónico?`
+    answerResponse: ()=> `¿Cuál es tu correo electrónico?`
   },
   {
     type: 'servicesnominee',
     coincidences: '',
     category: 'recruiting',
     order: 13,
-    answer: ()=> `¿A qué número de celular podemos contactarte?`
+    answerResponse: ()=> `¿A qué número de celular podemos contactarte?`
   },
   {
     type: 'servicesnominee',
     coincidences: '',
     category: 'recruiting',
     order: 14,
-    answer: ()=> `¿Por qué buscas empleo actualmente?
+    answerResponse: ()=> `¿Por qué buscas empleo actualmente?
     1. Nuevos retos
     2. Mejorar salario
     3. Desempleo
@@ -88,21 +93,21 @@ const script = (profileName) => [
     coincidences: '',
     category: 'recruiting',
     order: 15,
-    answer: ()=> `Por último, envianos tu hoja de vida en pdf con el siguiente nombre  HDV_Nombre completo`
+    answerResponse: ()=> `Por último, envianos tu hoja de vida en pdf con el siguiente nombre  HDV_Nombre completo`
   },
   {
     type: 'servicesnominee',
     coincidences: '',
     category: 'recruiting',
     order: 16,
-    answer: (person)=> `Gracias ${person}, toda la información fue recogida en nuestra base de datos y será revisada para nuestros procesos de selección, si aplicas a alguna de nuestras vacantes te estaremos contactando.`
+    answerResponse: (person)=> `Gracias ${person}, toda la información fue recogida en nuestra base de datos y será revisada para nuestros procesos de selección, si aplicas a alguna de nuestras vacantes te estaremos contactando.`
   },
   {
     type: 'servicescustomer',
     coincidences: '',
     category: 'commercial',
     order: 1,
-    answer: ()=> `Te interesan nuestros servicios de:
+    answerResponse: ()=> `Te interesan nuestros servicios de:
     1. Pruebas psicotécnicas
     2. Levantamiento de perfil
     3. Formación a medida
@@ -116,35 +121,35 @@ const script = (profileName) => [
     coincidences: '',
     category: 'commercial',
     order: 11,
-    answer: ()=> `¿Cómo se llama tu empresa?`
+    answerResponse: ()=> `¿Cómo se llama tu empresa?`
   },
   {
     type: 'servicescustomer',
     coincidences: '',
     category: 'commercial',
     order: 12,
-    answer: ()=> `¿Cuál es la necesidad de tu organización actualmente?`
+    answerResponse: ()=> `¿Cuál es la necesidad de tu organización actualmente?`
   },
   {
     type: 'servicescustomer',
     coincidences: '',
     category: 'commercial',
     order: 13,
-    answer: ()=> `¿A qué correo podemos contactarte?`
+    answerResponse: ()=> `¿A qué correo podemos contactarte?`
   },
   {
     type: 'servicescustomer',
     coincidences: '',
     category: 'commercial',
     order: 13,
-    answer: ()=> `¿A cuál número de celular podemos contactarte?`
+    answerResponse: ()=> `¿A cuál número de celular podemos contactarte?`
   },
   {
     type: 'servicescustomer',
     coincidences: '',
     category: 'commercial',
     order: 13,
-    answer: ()=> `¿A cuál número de celular podemos contactarte?`
+    answerResponse: ()=> `¿A cuál número de celular podemos contactarte?`
   },
 ];
 
