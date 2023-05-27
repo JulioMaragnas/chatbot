@@ -5,7 +5,7 @@ const template = (text, header) => {
       <html>
         <head>
           <meta charset="utf-8">
-          <title>NodeMailer Email Template</title>
+          <title>Email Template</title>
           <style>
             .container {
               width: 100%;
@@ -34,6 +34,9 @@ const template = (text, header) => {
               padding: 20px;
               text-align: center;
             }
+            .bold {
+              font-weight: 600
+            }
           </style>
         </head>
         <body>
@@ -46,7 +49,7 @@ const template = (text, header) => {
                 <p>${text}</p>
               </div>
               <div class="email-footer">
-                <p>EMAIL FOOTER</p>
+                <p>Notificaciones Gold Talent Soluciones</p>
               </div>
             </div>
           </div>

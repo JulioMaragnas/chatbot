@@ -6,17 +6,17 @@ const sendEmail = async (mailDetails, recipientType, callback) => {
   const { text, person } = mailDetails;
   const { header, subject, recipient } = await(recipients(recipientType, person));
   
-  console.log(mailDetails)
-  console.log(header)
-  console.log(subject)
-  console.log(recipient)
+  // console.log(mailDetails)
+  // console.log(header)
+  // console.log(subject)
+  // console.log(recipient)
   
   try {
     const options = {
       text,
       html: template(text, header),
       to: recipient,
-      from: 'GOLDIE🤖 from gts <notificacionesgoldie@gmail.com>',
+      from: 'GOLDIE👨‍💻 from gts <notificacionesgoldie@gmail.com>',
       subject,
     };
     const info = await transporter.sendMail(options);

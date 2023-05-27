@@ -7,7 +7,7 @@ const {answerService: { answerScript }} = require('../../application/answer.serv
 const message_wpp = async (incomingMessage, profileName, key) =>
   client.messages
     .create({
-      body: answerScript(incomingMessage, profileName),
+      body: await answerScript(incomingMessage, profileName),
       from: "whatsapp:+14155238886",
       to: `whatsapp:+${key}`,
     });

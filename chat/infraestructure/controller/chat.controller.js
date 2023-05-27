@@ -7,13 +7,9 @@ const { notificationCommand: { sendEmail } } = require('../../../notification/in
 app.post("/webhook", async (req, res) => {
     const { body } = req;
     const { Body : incomingMessage, ProfileName: profileName, WaId } = body;
-    // console.log(body); 
-    console.log('-------------------------')
-    console.log(profileName)
-    console.log('-------------------------')
+
     const response = new MessagingResponse();  
-    message_wpp(incomingMessage, profileName, WaId).then((resolve) => {
-      // console.log(resolve);
+    message_wpp(incomingMessage.toLowerCase(), profileName, WaId).then((resolve) => {
       res.send("ok");
     });
   });
