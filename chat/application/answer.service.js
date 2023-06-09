@@ -76,9 +76,7 @@ const validateNextMessage = async (category, type, order, answerRequest)=> {
     },
     ['expericence-survey-1']: ()=> buildObjectResponse('expericence', 'survey', 2),
     ['expericence-survey-2']: ()=> buildObjectResponse('expericence', 'survey', 3),
-    ['expericence-survey-3']: ()=> buildObjectResponse('expericence', 'survey', 4),
-    ['expericence-survey-4']: ()=> buildObjectResponse('expericence', 'survey', 5),
-    ['expericence-survey-5']: ()=> buildObjectResponse('expericence', 'survey', 6)
+    ['expericence-survey-3']: ()=> buildObjectResponse('expericence', 'survey', 4)
   }
   
   return (typeof nextMessage[`${category}-${type}-${order}`] === 'function' && nextMessage[`${category}-${type}-${order}`]())

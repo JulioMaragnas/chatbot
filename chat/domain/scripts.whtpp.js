@@ -164,14 +164,6 @@ const script = (profileName) => [
     coincidences: '',
     category: 'commercial',
     order: 15,
-    expectedAnswer:[],
-    answerResponse: ()=> `¿A cuál número de celular podemos contactarte?`
-  },
-  {
-    type: 'servicescustomer',
-    coincidences: '',
-    category: 'commercial',
-    order: 16,
     expectedAnswer:['si', 'no'],
     answerResponse: (person)=> `Gracias ${person}, toda la información fue recogida en nuestra base de datos y será revisada por nuestra ejecutiva comercial la cuál te estará contactando en menos de 24 horas para ofrecerte las soluciones ajustadas a tus necesidades.
     
@@ -199,29 +191,13 @@ const script = (profileName) => [
     category: 'expericence',
     order: 3,
     expectedAnswer:[],
-    answerResponse: (person)=> `Del 1 al 10  qué tan satisfecho estás con nuestra asesoría. Siendo 1 poco satisfecho y 10 muy satisfecho.`
+    answerResponse: (person)=> `Deseas agregar algún comentario? Déjalo a continuación sino responde NO`
   },
   {
     type: 'survey',
     coincidences: '',
     category: 'expericence',
     order: 4,
-    expectedAnswer:[],
-    answerResponse: (person)=> `Deseas agregar algún comentario? Déjalo a continuación sino responde NO`
-  },
-  {
-    type: 'survey',
-    coincidences: '',
-    category: 'expericence',
-    order: 5,
-    expectedAnswer:[],
-    answerResponse: (person)=> `Deseas agregar algún comentario? Déjalo a continuación sino responde NO`
-  },
-  {
-    type: 'survey',
-    coincidences: '',
-    category: 'expericence',
-    order: 6,
     finishScript: true,
     expectedAnswer:[],
     answerResponse: (person)=> `Gracias por responder, esperamos que toda la información pueda ser de utilidad. te deseamos un feliz día.
