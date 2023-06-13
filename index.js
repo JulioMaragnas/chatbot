@@ -16,6 +16,8 @@ app.use(express.json());
 app.use(require('./chat/infraestructure/controller/chat.controller'))
 
 console.log(`NODE_ENV=${config.NODE_ENV}`);
+console.log(`PORT=${config.PORT}`);
+console.log(`HOST=${config.HOST}`);
 
 app.get("/:numberReq", (req, res) => {
   res.json("hello fuckin world");
