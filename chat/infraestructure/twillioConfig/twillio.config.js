@@ -8,7 +8,7 @@ const message_wpp = async (incomingMessage, profileName, key) =>
   client.messages
     .create({
       body: await answerScript(incomingMessage, profileName),
-      from: "whatsapp:+573506249547",
+      from: "whatsapp:+14155238886",
       to: `whatsapp:+${key}`,
     });
 

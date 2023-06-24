@@ -99,16 +99,8 @@ const script = (profileName) => [
     coincidences: '',
     category: 'recruiting',
     order: 15,
-    expectedAnswer:[],
-    answerResponse: ()=> `Por último, envianos tu hoja de vida en pdf con el siguiente nombre  HDV_Nombre completo`
-  },
-  {
-    type: 'servicesnominee',
-    coincidences: '',
-    category: 'recruiting',
-    order: 16,
     expectedAnswer:['si', 'no'],
-    answerResponse: (person)=> `Gracias ${person}, toda la información fue recogida en nuestra base de datos y será revisada para nuestros procesos de selección, si aplicas a alguna de nuestras vacantes te estaremos contactando.
+    answerResponse: (person)=> `Gracias, toda la información fue recogida en nuestra base de datos y será revisada para nuestros procesos de selección, si aplicas a alguna de nuestras vacantes te estaremos contactando.
     
     *Deseas responder una breve encuesta?* Si/No`
   },
@@ -119,13 +111,13 @@ const script = (profileName) => [
     order: 1,
     expectedAnswer:[],
     answerResponse: ()=> `Te interesan nuestros servicios de:
-    1. Pruebas psicotécnicas
-    2. Levantamiento de perfil
-    3. Formación a medida
-    4. Atracción y selección
-    5. Pago por hojas de vida
-    6. Filtro + Bases de datos
-    7. Otros`
+      1. Pruebas psicotécnicas
+      2. Levantamiento de perfil
+      3. Formación a medida
+      4. Atracción y selección
+      5. Pago por hojas de vida
+      6. Filtro + Bases de datos
+      7. Otros`
   },
   {
     type: 'servicescustomer',
@@ -165,7 +157,7 @@ const script = (profileName) => [
     category: 'commercial',
     order: 15,
     expectedAnswer:['si', 'no'],
-    answerResponse: (person)=> `Gracias ${person}, toda la información fue recogida en nuestra base de datos y será revisada por nuestra ejecutiva comercial la cuál te estará contactando en menos de 24 horas para ofrecerte las soluciones ajustadas a tus necesidades.
+    answerResponse: (person)=> `Gracias, Toda la información fue recogida en nuestra base de datos y será revisada por nuestra ejecutiva comercial la cuál te estará contactando en menos de 24 horas para ofrecerte las soluciones ajustadas a tus necesidades.
     
     *Deseas responder una breve encuesta?* Si/No`
   },
@@ -175,7 +167,7 @@ const script = (profileName) => [
     category: 'expericence',
     order: 1,
     expectedAnswer:['si', 'no'],
-    answerResponse: (person)=> `${person}, ¿Te sientes satisfecho con la información suministrada por el asesor que atendió ésta conversación?`
+    answerResponse: (person)=> `¿Te sientes satisfecho con la información suministrada por el asesor que atendió ésta conversación?`
   },
   {
       type: 'survey',
