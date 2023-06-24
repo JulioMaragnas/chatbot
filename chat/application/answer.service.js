@@ -61,7 +61,7 @@ const validateNextMessage = async (category, type, order, answerRequest)=> {
     ['recruiting-servicesnominee-14']: ()=> buildObjectResponse('recruiting', 'servicesnominee', 15),
     ['recruiting-servicesnominee-15']: ()=> {
       const { expectedAnswer } = script().find(message => message.category === category && message.type === type && message.order === order);
-      return expectedAnswer.findIndex(answer => answer == answerRequest) === 0 ? buildObjectResponse('expericence', 'survey', 1): buildObjectResponse('expericence', 'survey', 6)
+      return expectedAnswer.findIndex(answer => answer == answerRequest) === 0 ? buildObjectResponse('expericence', 'survey', 1): buildObjectResponse('expericence', 'survey', 4)
     },
     ['commercial-servicescustomer-1']: ()=> buildObjectResponse('commercial', 'servicescustomer', 11),
     ['commercial-servicescustomer-11']: ()=> buildObjectResponse('commercial', 'servicescustomer', 12),
@@ -70,7 +70,7 @@ const validateNextMessage = async (category, type, order, answerRequest)=> {
     ['commercial-servicescustomer-14']: ()=> buildObjectResponse('commercial', 'servicescustomer', 15),
     ['commercial-servicescustomer-15']: ()=> {
       const { expectedAnswer } = script().find(message => message.category === category && message.type === type && message.order === order);
-      return expectedAnswer.findIndex(answer => answer == answerRequest) === 0 ? buildObjectResponse('expericence', 'survey', 1): buildObjectResponse('expericence', 'survey', 6)
+      return expectedAnswer.findIndex(answer => answer == answerRequest) === 0 ? buildObjectResponse('expericence', 'survey', 1): buildObjectResponse('expericence', 'survey', 4)
     },
     ['expericence-survey-1']: ()=> buildObjectResponse('expericence', 'survey', 2),
     ['expericence-survey-2']: ()=> buildObjectResponse('expericence', 'survey', 3),
