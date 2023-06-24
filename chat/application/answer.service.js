@@ -4,7 +4,7 @@ const { notificationCommand: { sendEmail } }  = require('../../notification/infr
 
 const answerScript = async (incomingMessage, profileName, key) => {
 
-  if (/^(hola|ola|hey|hello|buen|buenas|hi|inicio|(de nuevo))/.test(incomingMessage)) {
+  if (/^(hola|ola|hey|hello|buen|buenas|hi|inicio|holi|(de nuevo))/.test(incomingMessage)) {
     const responseMessage = script().find(message => message.order === 0 && message.type === 'greeting');
     const {order, type, category, answerResponse} = responseMessage;
     
