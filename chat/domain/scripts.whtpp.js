@@ -51,7 +51,7 @@ const script = (profileName) => [
     coincidences: '',
     category: 'recruiting',
     order: 1,
-    expectedAnswer:[],
+    expectedAnswer:['1', '2', '3'],
     answerResponse: (person)=> `Te haré preguntas para entender que necesitas y redireccionarte de manera adecuada a nuestro equipo o encargados de los procesos.📌
     Te interesa:
     1. Conocer el estado de un proceso de selección en el que estás participando
@@ -101,6 +101,17 @@ const script = (profileName) => [
     order: 15,
     expectedAnswer:['si', 'no'],
     answerResponse: (person)=> `Gracias, toda la información fue recogida en nuestra base de datos y será revisada para nuestros procesos de selección, si aplicas a alguna de nuestras vacantes te estaremos contactando.
+    
+    *Deseas responder una breve encuesta?* Si/No`
+  },
+  {
+    type: 'servicesnominee',
+    coincidences: '',
+    category: 'recruiting',
+    order: 16,
+    expectedAnswer:['si', 'no'],
+    answerResponse: ()=> `Nos entusiasma saber que te interesan nuestras vacantes, para participar recuerda enviarnos tu hoja de vida a *seleccion@goldtalentsoluciones.com*.
+    Para facilitar el proceso recuerda colocar en el asunto el nombre de la oferta laboral, para tener mayor éxito puedes contarnos un poco sobre tí en el cuerpo del correo.
     
     *Deseas responder una breve encuesta?* Si/No`
   },
