@@ -1,5 +1,5 @@
 const accountSid = 'ACc99825afe205554607d966a7f1049c11';
-const authToken = 'afbfb0defad986e21de9076c19bfaa23';
+const authToken = 'fbac5aaac911d0edd0d3a2f6f9985083';
 
 const client = require("twilio")(accountSid, authToken);
 const {answerService: { answerScript }} = require('../../application/answer.service')
